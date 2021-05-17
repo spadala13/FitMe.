@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Dashboard
+{% endblock %}
+
+{% block main%}
+  <div class="form-group has-search">
+    <form action="/dashboard" method="post">
+      <span class="fa fa-search form-control-feedback"></span>
+      <input autocomplete="off" autofocus type="text" name="search" class="form-control" placeholder="Search For a Exercise">
+    </form>
+  </div>
+
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Type</th>
+        <th scope="col">Date</th>
+        <th scope="col">Reps</th>
+        <th scope="col">Start Time</th>
+        <th scope="col">End Time</th>
+        <th scope="col">Total Calories Burned</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in range(length) %}
+        <tr class={{colors[i]}}>
+          <td>{{names[i]}}</td>
+          <td>{{types[i]}}</td>
+          <td>{{dates[i]}}</td>
+          <td>{{reps[i]}}</td>
+          <td>{{stimes[i]}}</td>
+          <td>{{etimes[i]}}</td>
+          <td>{{calories[i]}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

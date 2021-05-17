@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Exercise
+{% endblock %}
+
+{% block main %}
+    <form action="/addexercise" method="post" name="form">
+        <div class="form-group">
+            <label for="name" class="required">Name:</label>
+            <input autocomplete="off" autofocus type="text" name="name" id="amount" class="form-control" oninput="checkform()">
+        </div>
+        <div class="form-group">
+            <label for="type" class="required">Type of Exercise:</label>
+            <select name="type" class="form-control" id="type">
+                <option disabled selected value="">Select an Exercise Type</option>
+                {% for exercise in exercises %}
+                    <option value="{{ exercise }}">{{ exercise }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="date" class="required">Date:</label>
+            <input type="date" name="date" id="date" class="form-control" onchange="checkform()">
+        </div>
+        <div class="form-group">
+            <label for="note">Reps:</label>
+            <input autocomplete="off" autofocus type="text" name="reps" id="reps" class="form-control" onkeyup="checkform()">
+        </div>
+        <div class="form-group">
+            <label for="time" class="required">Start time:</label>
+            <input type="time" name="stime" id="stime" class="form-control" onkeyup="checkform()">
+        </div>
+        <div class="form-group">
+            <label for="time" class="required">End time:</label>
+            <input type="time" name="etime" id="etime" class="form-control" onchange="checkform()">
+        </div>
+        <div class="form-group">
+            <label for="calories" class="required">Total Calories Burned:</label>
+            <input type="number" name="calories" id="calories" class="form-control" min=0 onchange="checkform()">
+        </div>
+        <button class="btn btn-primary" type="submit" id="submitbutton" disabled>Submit</button>
+    </form>
+
+    <script>
+    function checkform()
+    {
+        var inputs = document.forms["form"].elements;
+        var cansubmit = true;
+
+        for (var i = 0; i < (inputs.length)-2; i++) {
+            if (inputs[i].value == "")
+            {
+                cansubmit = false;
+            }
+        }
+
+        if (cansubmit)
+        {
+            document.querySelector('#submitbutton').disabled = false;
+        }
+        else
+        {
+            document.querySelector('#submitbutton').disabled = true;
+        }
+    }
+    </script>
+{% endblock %}

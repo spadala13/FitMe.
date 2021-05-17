@@ -1,0 +1,121 @@
+
+#hello{
+    font-size: 3rem;
+    color: #fff;
+}
+
+
+.home h1{
+    font-size: 4rem;
+    color: #fff;
+    margin: 2rem 0;
+}
+
+.home button{
+    height: 4rem;
+    width: 16rem;
+    background: #663399;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    text-transform: capitalize;
+   -webkit-box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.3);
+    box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.3);
+}
+#backgroundimage {
+    background-image: url("fit3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.about{
+    padding-bottom: 3rem;
+}
+
+.about .heading{
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    margin: 3rem 0;
+    padding-top: 6rem;
+    position: relative;
+}
+
+.about .heading::after {
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: .3rem;
+  width: 5rem;
+  background: #333;
+}
+
+.about .info {
+  padding: 0 2rem;
+}
+
+.about .info h2 {
+  font-size: 3rem;
+  color: #00BFFF;
+}
+
+.about .info p {
+  font-size: 1.7rem;
+  color: #333;
+  padding-bottom: 3rem;
+}
+
+.about .info .skill-bar h3 {
+  margin-top: 2rem;
+}
+
+.about .info .skill-bar h3 span {
+  display: block;
+  text-align: end;
+}
+
+.about .info .skill-bar .bar {
+  width: 100%;
+  height: .5rem;
+  background: #ccc;
+  position: relative;
+}
+
+.about .info .skill-bar .bar span {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #00BFFF;
+}
+
+.about .info .skill-bar .bar1 span {
+  width: 100%;
+}
+
+.about .info .skill-bar .bar2 span {
+  width: 80%;
+}
+
+.about .info .skill-bar .bar3 span {
+  width: 60%;
+}
+
+.about .info .skill-bar .bar4 span {
+  width: 40%;
+}
+.about .info .skill-bar .bar5 span {
+  width: 20%;
+}
+
+
+
+

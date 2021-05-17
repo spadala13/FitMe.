@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <h1> Register a New Account </h1>
+    <form actions="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" autofocus name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" autofocus name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" autofocus name="confirmation" placeholder="Re-enter Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register!</button>
+    </form>
+
+    <script>
+    function checkform()
+    {
+        var inputs = document.forms["theform"].elements;
+        var cansubmit = true;
+
+        for (var i = 0; i < (inputs.length)-1; i++) {
+            if (inputs[i].value == "")
+            {
+                cansubmit = false;
+            }
+        }
+
+        if (cansubmit)
+        {
+            document.querySelector('#submitbutton').disabled = false;
+        }
+        else
+        {
+            document.querySelector('#submitbutton').disabled = true;
+        }
+    }
+    </script>
+    <link href ="/static/home.css" rel="stylesheet"></href>
+{% endblock %}

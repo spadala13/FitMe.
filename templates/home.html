@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="card-counter exercises" id="exercises">
+            <span class="cal-name" id="cals">Total Calories Burned:          </span>
+            <span class="cal-numbers centered" id="total-exercises">       {{ total }}</span>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="card-counter cardio">
+            <i class="fas fa-heartbeat"></i>
+            <span class="exercise-total">{{ cardio }}</span>
+            <span class="exercise-name">Cardio</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-counter lifting">
+            <i class="fas fa-dumbbell"></i>
+            <span class="exercise-total">{{ lifting }}</span>
+            <span class="exercise-name">Weight Lifting</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-counter muscle">
+            <i class="fas fa-fire-alt"></i>
+            <span class="exercise-total">{{ muscle }}</span>
+            <span class="exercise-name">Muscle Strengthening</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-counter flexibility">
+            <i class="fas fa-spa"></i>
+            <span class="exercise-total">{{ flexibility }}</span>
+            <span class="exercise-name">Flexibility</span>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="card-counter swimming">
+            <i class="fas fa-swimmer"></i>
+            <span class="exercise-total">{{ swimming }}</span>
+            <span class="exercise-name">Swimming</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card-counter walking">
+            <i class="fas fa-shoe-prints"></i>
+            <span class="exercise-total">{{ walking }}</span>
+            <span class="exercise-name">Walking</span>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="card-counter other">
+            <i class="fas fa-biking"></i>
+            <span class="exercise-total">{{ other }}</span>
+            <span class="exercise-name">Other</span>
+          </div>
+        </div>
+    </div>
+</div>
+
+<link href ="/static/home.css" rel="stylesheet"></href>
+{% endblock %}
